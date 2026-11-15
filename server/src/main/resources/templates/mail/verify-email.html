@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verify your MiniBasket email</title>
+</head>
+<body style="margin:0;background:#f7f8f6">
+<div style="font-family:Arial,Helvetica,sans-serif;max-width:480px;margin:0 auto;padding:24px;color:#18201b">
+  <p th:replace="~{mail/parts :: logo}"></p>
+  <p style="font-size:15px;line-height:1.5">Welcome to MiniBasket! Confirm your email address to start shopping.</p>
+  <p th:replace="~{mail/parts :: button(${link}, 'Verify my email')}"></p>
+  <p style="font-size:13px;color:#5b675f">This link works for 24 hours.</p>
+  <p th:replace="~{mail/parts :: fallback(${link})}"></p>
+</div>
+</body>
+</html>

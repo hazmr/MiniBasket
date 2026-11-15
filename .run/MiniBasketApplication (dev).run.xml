@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="MiniBasketApplication (dev)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <option name="ACTIVE_PROFILES" value="dev" />
+    <module name="minibasket" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="valleysoft.minibasket.MiniBasketApplication" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

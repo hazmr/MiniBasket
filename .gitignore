@@ -1,0 +1,111 @@
+# One .gitignore for the whole repo: server/ (Spring Boot, Maven) and client/ (Next.js).
+# Patterns without a "/" match in every folder, so new modules are covered too;
+# patterns with a "/" in the middle need a leading **/ to do the same.
+# To commit a file that a rule ignores on purpose: git add -f <file>
+
+# ---------- Secrets and local settings: never commit ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+secrets/
+# Personal Spring overrides, e.g. src/main/resources/application-local.yaml
+application-local.yaml
+application-local.properties
+# Personal Docker Compose overrides (Compose loads this file automatically)
+compose.override.yaml
+docker-compose.override.yml
+
+# ---------- Java / Maven / Gradle (server/) ----------
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+.gradle/
+# The Maven wrapper script downloads this jar itself
+**/.mvn/wrapper/maven-wrapper.jar
+*.class
+hs_err_pid*.log
+replay_pid*.log
+HELP.md
+
+# ---------- Node / Next.js (client/) ----------
+node_modules/
+.next/
+out/
+dist/
+.turbo/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ---------- Test output ----------
+coverage/
+test-results/
+playwright-report/
+blob-report/
+**/playwright/.cache/
+
+# ---------- Logs ----------
+*.log
+logs/
+
+# ---------- IDEs and editors ----------
+# IntelliJ: personal workspace files. The shared run configurations live in .run/ and ARE committed.
+.idea/
+*.iml
+*.iws
+*.ipr
+# VS Code: personal settings, but share recommended extensions if added later
+.vscode/*
+!.vscode/extensions.json
+# Eclipse / Spring Tools
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+# NetBeans
+**/nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
+# Vim / Emacs
+*.swp
+*~
+
+# ---------- Operating systems ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+.directory
+
+# ---------- Claude Code: personal settings only (shared .claude/ files are fine to commit) ----------
+**/.claude/settings.local.json
+CLAUDE.local.md
+
+# ---------- Infrastructure (for when deployment is added) ----------
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example

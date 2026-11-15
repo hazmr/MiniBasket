@@ -1,0 +1,5 @@
+{
+  // VS Code suggests these when someone opens the project.
+  // "Project Manager for Java" adds the Java Projects view, which shows packages instead of folders.
+  "recommendations": ["redhat.java", "vscjava.vscode-java-dependency"]
+}

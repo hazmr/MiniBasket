@@ -1,0 +1,18 @@
+app:
+  jwt:
+    secret: dGVzdC1vbmx5LXNlY3JldC1rZXktZm9yLW1pbmliYXNrZXQtdGVzdHM=
+  storage:
+    endpoint: set-by-TestInfrastructure
+    bucket: test-bucket
+    access-key-id: test-user
+    secret-access-key: test-secret
+    public-url: set-by-TestInfrastructure
+  email:
+    enabled: true
+
+spring:
+  mail:
+    host: localhost
+    properties:
+      mail.smtp.auth: false
+      mail.smtp.starttls.enable: false

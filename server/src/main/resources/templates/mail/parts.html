@@ -1,0 +1,15 @@
+<!-- Pieces shared by every email. Inline styles because most email apps ignore <style> blocks. -->
+<html xmlns:th="http://www.thymeleaf.org">
+
+<p th:fragment="logo" style="font-size:20px;font-weight:bold;color:#157a3e;margin:0 0 16px">MiniBasket</p>
+
+<p th:fragment="button(link, label)" style="margin:24px 0">
+  <a th:href="${link}" th:text="${label}"
+     style="background:#157a3e;color:#ffffff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:bold">Button</a>
+</p>
+
+<p th:fragment="fallback(link)" style="font-size:12px;color:#5b675f;word-break:break-all">
+  Button not working? Open this link: <span th:text="${link}">link</span>
+</p>
+
+</html>

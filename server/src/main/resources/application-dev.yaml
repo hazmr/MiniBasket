@@ -1,0 +1,19 @@
+app:
+  jwt:
+    secret: bWluaWJhc2tldC1kZXYtc2VjcmV0LWtleS0zMi1ieXRlcyE=
+  storage:
+    endpoint: ${STORAGE_ENDPOINT:http://localhost:9000}
+    bucket: ${STORAGE_BUCKET:minibasket}
+    access-key-id: ${STORAGE_ACCESS_KEY_ID:minibasket}
+    secret-access-key: ${STORAGE_SECRET_ACCESS_KEY:minibasket-secret}
+    public-url: ${STORAGE_PUBLIC_URL:http://localhost:9000/minibasket}
+  email:
+    enabled: ${MAIL_ENABLED:true}
+
+spring:
+  mail:
+    host: ${MAIL_HOST:localhost}
+    port: ${MAIL_PORT:1026}
+    properties:
+      mail.smtp.auth: ${MAIL_SMTP_AUTH:false}
+      mail.smtp.starttls.enable: ${MAIL_STARTTLS:false}
